@@ -1,0 +1,64 @@
+<html>
+<body>
+<script>
+function output(x) {document.write(x);};
+a = 1;
+function f1() {
+	var a = 2;
+};
+f1();
+output(a);
+output("<hr />");
+function print(x) {
+	output("<hr />");
+	output(x);
+};
+b = 3;
+function f2() {
+	print(b);
+	var b = 4;
+	print(b);
+	var b = 5;
+	print(b);
+};
+print(b);
+f2();
+print(b);
+c = 6;
+function f4() {
+	c = 8;
+};
+function f3() {
+	let c = 7;
+	print(c);
+	f4();
+	print(c);
+	function f5() {
+		c = 9;
+	};
+	f5();
+	print(c);
+};
+print(c);
+f3();
+print(c);
+
+function run() {
+  var foo = "Foo";
+  let bar = "Bar";
+
+output(foo);
+output(bar);
+
+  {
+    let baz = "Bazz";
+    output(baz);
+  }
+
+  output(baz); // ReferenceError
+}
+
+run();
+</script>
+</body>
+</html>

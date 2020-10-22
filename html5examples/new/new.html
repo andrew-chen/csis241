@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+function bob() {
+	this.left = 0;
+	this.right = 0;
+};
+bob();
+Bob = {
+	left: 0,
+	right: 0
+};
+b = new bob();
+document.write(b);
+document.write(b.left);
+document.write(b.right);
+document.write("<hr />");
+
+document.write(Bob);
+document.write(Bob.left);
+document.write(Bob.right);
+
+Fred = new Object();
+Fred.left = 0;
+Fred.right = 0;
+document.write("<hr />");
+document.write(Fred);
+document.write(Fred.left);
+document.write(Fred.right);
+</script>
+</body>
+</html>
